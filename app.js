@@ -1,11 +1,12 @@
 var express = require('express');
-
 var app = express();
 
 app.get('/', function (req, res){
   res.send('it works');
 })
 
-app.listen(process.env.PORT || 3000);
+app.get('/hello', function (req, res){
+  res.send('hello');
+})
 
-module.exports = app;
+app.listen(3000);
